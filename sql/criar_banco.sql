@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS projeto_php;
+USE projeto_php;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  login VARCHAR(50) NOT NULL,
+  senha VARCHAR(255) NOT NULL,
+  email VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE itens (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT NOT NULL,
+  titulo VARCHAR(100) NOT NULL,
+  descricao TEXT,
+  data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
