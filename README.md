@@ -1,3 +1,6 @@
+## Tema escolhido 
+- Gerenciador de Tarefas.
+
 ## Funcionalidades
 - Cadastro de usuário com verificação de duplicidade
 - Login com verificação de senha criptografada
